@@ -1,0 +1,231 @@
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  color: rgb(0, 102, 255);
+  margin: 0;
+}
+
+time {
+color: gray;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  margin: 0;
+}
+
+
+/* app styles: */
+
+.logo {
+width: 120px;
+margin-right: 20px;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.upper-block {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+gap: 50px;
+}
+
+/* widget styles */
+.widget {
+display: flex;
+flex-direction: column;
+gap: 10px;
+width: 260px;
+}
+
+
+.img-container {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden; 
+}
+
+.widget-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* .widget-body {
+  width: 300px;
+} */
+
+/* nowWidget */
+.now-widget-titles {
+  display: flex;
+  gap: 14px;
+ align-items: center;
+}
+
+.title.active {
+   font-size: 19.2px;
+}
+
+.title.inactive {
+   color: rgba(0, 102, 255, 0.452);
+}
+
+.widget-news {
+  padding: 0;
+}
+.currencies {
+display: flex;
+  gap:12px;
+}
+.currency {
+  display: flex;
+  gap:7px;
+  font-weight: 700;
+}
+
+.сhange-level {
+  color: gray;
+  font-weight: 400;
+}
+
+.fav-icon {
+  margin-right: 5px;
+}
+
+/* search widget */
+.search-widget {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.link-item {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(0, 102, 255);
+  font-size: 18px;
+}
+
+.input-container {
+  background-color: rgb(238, 238, 68);
+  width: 90%;
+  height: 36px;
+  padding: 0;
+}
+.input {
+  width: 87%;
+  height: 30px;
+  margin: 2px;
+  border: none;
+  outline: none;
+}
+
+.search-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.search-suggestion-link {
+  color: gray;
+  cursor: pointer;
+}
+
+.banner-img {
+  margin-top: 10px;
+  width: 87%;
+}
+
+.text {
+margin-top: 10px;
+}
+
+.lower-block {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+height: 210px;
+gap: 10px;
+}
+
+.weather-info {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.weather-degree {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.visited-link {
+  font-weight: 700;
+  color: black;
+}
+
+.visited-link > span {
+  font-weight: 400;
+}
+
+.map-link {
+  color: black;
+}
+
+.channel-name {
+  color: gray;
+}
+
+.program-link, .broadcast-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.channel {
+  color: gray;
+}
