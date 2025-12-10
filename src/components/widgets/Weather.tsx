@@ -1,6 +1,6 @@
 import Widget from "./Widget";
 
-export default function WeatherWidget() {
+export default function Weather() {
   return (
     <>
       <Widget title="Weather">

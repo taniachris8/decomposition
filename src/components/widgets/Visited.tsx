@@ -1,6 +1,6 @@
 import Widget from "./Widget";
 
-export default function VisitedWidget() {
+export default function Visited() {
   return (
     <>
       <Widget title="Visited">

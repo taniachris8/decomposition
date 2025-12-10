@@ -1,6 +1,6 @@
 import Widget from "./Widget";
 
-export default function GermanyMapWidget() {
+export default function GermanyMap() {
   return (
     <>
       <Widget title="Map of Germany">
@@ -8,7 +8,7 @@ export default function GermanyMapWidget() {
           <ul className="map-list">
             <li className="map-item">
               <a href="" className="map-link">
-                Schedule 
+                Schedule
               </a>
             </li>
           </ul>

@@ -2,7 +2,7 @@ import Banner from "./Banner";
 import Input from "./Input";
 import Links from "./Links";
 
-export default function SearchWidget() {
+export default function SearchBlock() {
     return (
       <>
         <div className="search-widget">

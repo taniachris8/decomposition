@@ -1,6 +1,6 @@
 import Widget from "./Widget";
 
-export default function BroadcastWidget() {
+export default function Broadcast() {
   return (
     <>
       <Widget title="BroadCast">

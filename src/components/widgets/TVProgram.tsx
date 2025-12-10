@@ -1,6 +1,6 @@
 import Widget from "./Widget";
 
-export default function TVProgramWidget() {
+export default function TVProgram() {
   return (
     <>
       <Widget title="TV Program">

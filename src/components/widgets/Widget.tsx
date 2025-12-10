@@ -14,7 +14,11 @@ export default function Widget({ img, title, children }: WidgetProps) {
           </div>
         )}
         <div className="widget-body">
-          <h3 className="title">{title}</h3>
+          <h3 className="title">
+            <a href="" className="title-link">
+              {title}
+            </a>
+          </h3>
           {children}
         </div>
       </div>
