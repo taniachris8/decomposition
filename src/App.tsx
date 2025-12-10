@@ -1,29 +1,37 @@
 import "./App.css";
 import Broadcast from "./components/widgets/Broadcast";
 import GermanyMap from "./components/widgets/GermanyMap";
-import NewsNow from "./components/NewsNow";
+import LatestNews from "./components/LatestNews";
 import SearchBlock from "./components/searchBlock/SearchBlock";
 import TVProgram from "./components/widgets/TVProgram";
-import Visited from "./components/widgets/Visited";
+import MostVisitedLinks from "./components/widgets/MostVisitedLinkes";
 import Weather from "./components/widgets/Weather";
-import WorkOnMistakes from "./components/widgets/WorkOnMistakes";
-import { nowNews, currencies } from "./data";
+import Article from "./components/widgets/Article";
+import {
+  latestNews,
+  currencies,
+  searchLinks,
+  weatherInfo,
+  mostVisitedLinks,
+  tvProgramData,
+  broadcastData,
+} from "./data.ts";
 
 function App() {
   return (
     <>
       <div className="blocks">
         <div className="upper-block">
-          <NewsNow news={nowNews} currency={currencies} />
-          <WorkOnMistakes />
+          <LatestNews news={latestNews} currency={currencies} />
+          <Article />
         </div>
-        <SearchBlock />
+        <SearchBlock links={searchLinks} />
         <div className="lower-block">
-          <Weather />
-          <Visited />
+          <Weather data={weatherInfo} />
+          <MostVisitedLinks links={mostVisitedLinks} />
           <GermanyMap />
-          <TVProgram />
-          <Broadcast />
+          <TVProgram data={tvProgramData} />
+          <Broadcast data={broadcastData} />
         </div>
       </div>
     </>

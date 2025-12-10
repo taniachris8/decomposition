@@ -1,19 +1,26 @@
-import Widget from "./Widget";
+/**
+ * Renders current weather information.
+ *
+ * @param data - Object that contains the weather info for today.
+ */
 
-export default function Weather() {
+import Widget from "./Widget";
+import type { weatherInfoProps } from "../../data";
+
+type WeatherProps = {
+  data: weatherInfoProps
+};
+
+export default function Weather({ data }: WeatherProps) {
   return (
     <>
       <Widget title="Weather">
         <div className="weather-info">
-          <img
-            src="/icons8-partly-cloudy-day-48.png"
-            className="weather-icon"
-            alt="weather"
-          />
-          <p className="weather-degree">+19°</p>
+          <img src={data.img} className="weather-icon" alt="weather" />
+          <p className="weather-degree">{data.degree}</p>
           <p style={{ whiteSpace: "pre-line" }}>
-            {`day +19,
-            night +13`}
+            {`day ${data.day},
+            night ${data.night}`}
           </p>
         </div>
       </Widget>

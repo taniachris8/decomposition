@@ -1,3 +1,15 @@
+/**
+ * A reusable UI wrapper component for displaying widgets.
+ *
+ * @remarks
+ * This component provides a structure that includes
+ * an optional image, a widget title and custom widget content.
+ *
+ * @param img - Optional image URL to display at the top of the widget.
+ * @param title - The title of the widget body.
+ * @param children - The specific widget content to be rendered inside the widget.
+ */
+
 type WidgetProps = {
   img?: string;
   title: string;
@@ -10,7 +22,7 @@ export default function Widget({ img, title, children }: WidgetProps) {
       <div className="widget">
         {img && (
           <div className="img-container">
-            <img alt="widget image" className="widget-img" src={img} />
+            <img alt="Widget Image" className="widget-img" src={img} />
           </div>
         )}
         <div className="widget-body">

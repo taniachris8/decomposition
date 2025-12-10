@@ -1,47 +1,23 @@
-export default function Links() {
+/**
+ * Renders the most popular links for better user experience.
+ *
+ * @param links - Array of links.
+ */
+
+import type { SearchBlockProps } from "./SearchBlock";
+
+export default function Links({ links }: SearchBlockProps) {
   return (
     <>
       <ul className="links">
-        <li className="link-item">
-          <a href="" className="link">
-            Video
-          </a>
-        </li>
-        <li className="link-item">
-          <a href="" className="link">
-            Images
-          </a>
-        </li>
-        <li className="link-item">
-          <a href="" className="link">
-            News
-          </a>
-        </li>
-        <li className="link-item">
-          <a href="" className="link">
-            Maps
-          </a>
-        </li>
-        <li className="link-item">
-          <a href="" className="link">
-            Market
-          </a>
-        </li>
-        <li className="link-item">
-          <a href="" className="link">
-            Translator
-          </a>
-        </li>
-        <li className="link-item">
-          <a href="" className="link">
-            Broadcast
-          </a>
-        </li>
-        <li className="link-item">
-          <a href="" className="link">
-            more
-          </a>
-        </li>
+        {links &&
+          links.map((link) => (
+            <li key={link.id} className="link-item">
+              <a href="" className="link">
+                {link.name}
+              </a>
+            </li>
+          ))}
       </ul>
     </>
   );

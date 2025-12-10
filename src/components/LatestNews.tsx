@@ -1,34 +1,38 @@
 /**
- * Renders the latest news stories and currency exchange rates.
- * 
+ * Renders the latest news and currency exchange rates.
+ *
  * @param news - Array of news items.
  * @param currency - Array of currency entries.
  */
 
-type NewsNowProps = {
-  news: {
-    id: string;
-    img: string;
-    title: string;
-  }[];
+import type { latestNewsProps } from "../data";
+import type { currencyProps } from "../data";
 
-  currency: {
-    id: string;
-    name: string;
-    exchange: string;
-    rate: number;
-    level: string;
-  }[];
+type LatestNewsProps = {
+  news: latestNewsProps[];
+  currency: currencyProps[];
 };
 
-export default function NewsNow({ news, currency }: NewsNowProps) {
+export default function LatestNews({ news, currency }: LatestNewsProps) {
   return (
     <>
       <div className="news-now-container">
         <div className="news-now-titles">
-          <h3 className="title active">Now in Media</h3>
-          <h3 className="title inactive">Germany</h3>
-          <h3 className="title inactive">Recommended</h3>
+          <h3>
+            <a href="" className="title">
+              Now in Media
+            </a>
+          </h3>
+          <h3>
+            <a href="" className="title inactive">
+              Germany
+            </a>
+          </h3>
+          <h3>
+            <a href="" className="title inactive">
+              Recommended
+            </a>
+          </h3>
           <time>December 09, Wednesday 13:41</time>
         </div>
         <div className="news-now-body">

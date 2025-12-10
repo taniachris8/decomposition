@@ -1,46 +1,36 @@
-import Widget from "./Widget";
+/**
+ * Renders links to most popular broadcast shows.
+ *
+ * @param data - Array of shows.
+ */
 
-export default function Broadcast() {
+import Widget from "./Widget";
+import type { broadcastProps } from "../../data";
+
+type BroadcastProps = {
+  data: broadcastProps[]
+};
+
+export default function Broadcast({ data }: BroadcastProps) {
   return (
     <>
       <Widget title="BroadCast">
-        <div className="broadcast-body">
-          <ul className="broadcast-list">
-            <li className="broadcast-item">
-              <a href="" className="broadcast-link">
-                <img
-                  src="/fav-icons/icons8-video-16.png"
-                  alt="broadcast"
-                  className="broadcast-icon"
-                />
-                <span>Global Trends</span>
-                <span className="channel">BBC World</span>
-              </a>
-            </li>
-            <li className="broadcast-item">
-              <a href="" className="broadcast-link">
-                <img
-                  src="/fav-icons/icons8-video-16.png"
-                  alt="broadcast"
-                  className="broadcast-icon"
-                />
-                <span>Tech Today</span>
-                <span className="channel">CNN</span>
-              </a>
-            </li>
-            <li className="broadcast-item">
-              <a href="" className="broadcast-link">
-                <img
-                  src="/fav-icons/icons8-video-16.png"
-                  alt="broadcast"
-                  className="broadcast-icon"
-                />
-                <span>Morning Vibes</span>
-                <span className="channel">Discovery Life</span>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul className="content-container">
+          {data &&
+            data.map((item) => (
+              <li key={item.id} className="content-item">
+                <a href="" className="broadcast-link">
+                  <img
+                    src={item.img}
+                    alt="broadcast"
+                    className="broadcast-icon"
+                  />
+                  <span>{item.name}</span>
+                  <span className="channel">{item.channel}</span>
+                </a>
+              </li>
+            ))}
+        </ul>
       </Widget>
     </>
   );
